@@ -1,4 +1,6 @@
 ## Sep 10
+
+Note: switched from bananas to cherries: 'gcloud compute ssh cherries-controller'
 Had trouble setting up google sdk on my local terminal (new mac). Fixed it with the following steps. 
 
 The default shell is probably zsh; checked with "echo $SHELL". Got /bin/zsh, changed using "chsh -s /bin/bash"\
@@ -41,5 +43,5 @@ Result: 6 .zip files and 6 .html files
 
 Bring the html files back to local to veiw in web format (run command from local)
 ```
-Cottonelles-MBP:~ cottonellezhou$ gcloud compute scp bananas-controller:/home/zz220/RISE/fastqc_out/*_fastqc.html .
+Cottonelles-MBP:~ cottonellezhou$ gcloud compute scp cherries-controller:/home/zz220/RISE/fastqc_out/*_fastqc.html .
 ```
