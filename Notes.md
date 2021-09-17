@@ -30,6 +30,8 @@ Now we are looking at files of size selected small RNAs- pi RNAs, miRNAs, etc, b
 
 Goal: 1. download and run these 6 files through FastQC
 
+$ gsutil ls gs://gu-biology-pi-paa9/culexBiting_smallRNA/rawData
+
 - M1_S4_L001_R1_001.fastq.gz
 - M2_S5_L001_R1_001.fastq.gz
 - M4_S6_L001_R1_001.fastq.gz
