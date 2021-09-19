@@ -47,3 +47,14 @@ Bring the html files back to local to veiw in web format (run command from local
 ```
 Cottonelles-MBP:~ cottonellezhou$ gcloud compute scp cherries-controller:/home/zz220/RISE/fastqc_out/*_fastqc.html .
 ```
+
+## 9.18
+
+Counting reads of the raw files
+```
+wc -l M1_S4_L001_R1_001.fastq 
+```
+Count the number of lines using wc -l and then divide by 4
+
+
+
