@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=EC-12_R1_001.fq --output=z01.%x
+#SBATCH --job-name=clnM1S4 --output=z01.%x
 #SBATCH --mail-type=END,FAIL --mail-user=zz220@georgetown.edu
 #SBATCH --nodes=1 --ntasks=1 --cpus-per-task=1 --time=72:00:00
 #SBATCH --mem=4G
