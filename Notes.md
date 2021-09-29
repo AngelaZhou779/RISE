@@ -67,9 +67,9 @@ This file can also be found the the trimmomatic folder of my account with the fo
 Afterwards I ran the files through fastqc using the [following fastqc script](https://github.com/AngelaZhou779/RISE/blob/main/script/fastqc_clnfiles.sh).
 
 download the fastqc files
-'''
+```
 gcloud compute scp cherries-controller:/home/zz220/RISE/fastqc_out/*.cln_fastqc.html .
-'''
+```
 
 From the fastqc files, you can see that the per base sequences quality improved and the adapter content was removed. Around 80% of the reads are left after cleaning, although there are still red flags for the following:
 [FAIL]Per base sequence content
