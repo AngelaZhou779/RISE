@@ -48,6 +48,8 @@ Bring the html files back to local to veiw in web format (run command from local
 Cottonelles-MBP:~ cottonellezhou$ gcloud compute scp cherries-controller:/home/zz220/RISE/fastqc_out/*_fastqc.html .
 ```
 
+
+
 ## 9.18
 
 Counting reads of the raw files
@@ -56,5 +58,22 @@ wc -l M1_S4_L001_R1_001.fastq
 ```
 Count the number of lines using wc -l and then divide by 4
 
+## 9.29
+To clean the files, I ran the following [trimmomatic script](https://github.com/AngelaZhou779/RISE/blob/main/script/Trimmomatic.sh)
 
+Note that SE was used. In addition, the adapter sequences for the Illumina small RNA 3' adapter can be found [here](https://github.com/AngelaZhou779/RISE/blob/main/miscellaneous/smalladaptercontent.md) Also, all the cleaned files will have the annotation: .cln.fastq
+This file can also be found the the trimmomatic folder of my account with the following path: /home/zz220/trimmomatic/Trimmomatic-0.39/adapters/smRNA_NexFlex_adapters.fa
 
+Afterwards I ran the files through fastqc using the [following fastqc script](https://github.com/AngelaZhou779/RISE/blob/main/script/fastqc_clnfiles.sh)
+
+download the fastqc files
+'''
+gcloud compute scp cherries-controller:/home/zz220/RISE/fastqc_out/*.cln_fastqc.html .
+'''
+
+From the fastqc files, you can see that the per base sequences quality improved and the adapter content was removed. Around 80% of the reads are left after cleaning, although there are still red flags for the following:
+[FAIL]Per base sequence content
+[FAIL]Per sequence GC content
+[WARNING]Sequence Length Distribution
+[FAIL]Sequence Duplication Levels
+[FAIL]Overrepresented sequences 
