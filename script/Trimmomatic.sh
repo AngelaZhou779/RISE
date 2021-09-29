@@ -17,11 +17,11 @@ input=/home/zz220/RISE/M1_S4_L001_R1_001.fastq.gz
 output=/home/zz220/RISE/M1_S4_L001_R1_001.cln.fastq.gz
 
 #- RUN command ----------------#
-java -jar trimmomatic-0.39.jar SE \
+java -jar $trim_prog SE \
 $input \
 $output \
-ILLUMINACLIP:smRNA_NexFlex_adapters.fa:2:30:10
-HEADCROP:10 \
+ILLUMINACLIP:/home/zz220/trimmomatic/Trimmomatic-0.39/adapters/smRNA_NexFlex_adapters.fa:2:30:10 \
+HEADCROP:4 \
 TRAILING:10 \
 SLIDINGWINDOW:4:15 \
 MINLEN:17
