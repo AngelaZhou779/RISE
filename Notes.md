@@ -59,12 +59,12 @@ wc -l M1_S4_L001_R1_001.fastq
 Count the number of lines using wc -l and then divide by 4
 
 ## 9.29
-To clean the files, I ran the following [trimmomatic script](https://github.com/AngelaZhou779/RISE/blob/main/script/Trimmomatic.sh)
+To clean the files, I ran the following [trimmomatic script](https://github.com/AngelaZhou779/RISE/blob/main/script/Trimmomatic.sh).
 
-Note that SE was used. In addition, the adapter sequences for the Illumina small RNA 3' adapter can be found [here](https://github.com/AngelaZhou779/RISE/blob/main/miscellaneous/smalladaptercontent.md) Also, all the cleaned files will have the annotation: .cln.fastq
+Note that SE was used. In addition, the adapter sequences for the Illumina small RNA 3' adapter can be found [here](https://github.com/AngelaZhou779/RISE/blob/main/miscellaneous/smalladaptercontent.md). Also, all the cleaned files will have the annotation: .cln.fastq
 This file can also be found the the trimmomatic folder of my account with the following path: /home/zz220/trimmomatic/Trimmomatic-0.39/adapters/smRNA_NexFlex_adapters.fa
 
-Afterwards I ran the files through fastqc using the [following fastqc script](https://github.com/AngelaZhou779/RISE/blob/main/script/fastqc_clnfiles.sh)
+Afterwards I ran the files through fastqc using the [following fastqc script](https://github.com/AngelaZhou779/RISE/blob/main/script/fastqc_clnfiles.sh).
 
 download the fastqc files
 '''
