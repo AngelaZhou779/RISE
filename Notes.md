@@ -43,7 +43,7 @@ Ran [script](https://github.com/AngelaZhou779/RISE/blob/main/script/FastQC.sh) c
 It finished running in about 45min
 Result: 6 .zip files and 6 .html files
 
-Bring the html files back to local to veiw in web format (run command from local)
+Bring the html files back to local to veiw in web format (run command from local device)
 ```
 Cottonelles-MBP:~ cottonellezhou$ gcloud compute scp cherries-controller:/home/zz220/RISE/fastqc_out/*_fastqc.html .
 ```
@@ -66,7 +66,7 @@ This file can also be found the the trimmomatic folder of my account with the fo
 
 Afterwards I ran the files through fastqc using the [following fastqc script](https://github.com/AngelaZhou779/RISE/blob/main/script/fastqc_clnfiles.sh).
 
-download the fastqc files
+Bring the html files back to local to veiw in web format (run command from local):
 ```
 gcloud compute scp cherries-controller:/home/zz220/RISE/fastqc_out/*.cln_fastqc.html .
 ```
