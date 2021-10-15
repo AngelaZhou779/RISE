@@ -77,3 +77,17 @@ From the fastqc files, you can see that the per base sequences quality improved 
 [WARNING]Sequence Length Distribution
 [FAIL]Sequence Duplication Levels
 [FAIL]Overrepresented sequences 
+
+
+## 10.15
+To make index:
+$bowtie2-build –h
+bowtie2-build [options]* <reference_in> <bt2_index_base>
+=> bowtie2-build culex_quinq_tRNArRNA.fa contam_align
+ 
+To run alignment and put non-aligned reads into filtered fasta (?):
+ 
+$bowtie2  --un M1_S4_L001_R1_001.cln.flt.fastq.gz -x contam_align -U M1_S4_L001_R1_001.cln.fastq.gz -b M1_S4_L001_R1_001.ctn.bam
+-U means single end files
+
+-b for output bed file
