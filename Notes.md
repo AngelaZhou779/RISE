@@ -80,6 +80,9 @@ From the fastqc files, you can see that the per base sequences quality improved 
 
 
 ## 10.15
+Aim: to remove tRNA and other contaminates. Note: raw files were removed from my folder. Trimmed files (with the adapters removed) have the extension cln_fastqc.html
+
+First tried the following methodolgy on one data file: M1_S4_L001_R1_001.ctn.bam
 To make index:
 $bowtie2-build –h
 bowtie2-build [options]* <reference_in> <bt2_index_base>
@@ -91,3 +94,32 @@ $bowtie2  --un M1_S4_L001_R1_001.cln.flt.fastq.gz -x contam_align -U M1_S4_L001_
 -U means single end files
 
 -b for output bed file
+
+Results: no contaminants were found
+
+## 10.17
+To verify the results from bowtie, I will blast the tRNA sequences against the sequence reads: using the short reads from a single data file as reference sequences, and use the tRNA sequences as query sequences:
+
+1. Convert the fastq file to a fasta file:
+
+$cat M1_S4_L001_R1_001.cln.fastq | awk '{if(NR%4==1) {printf(">%s\n",substr($0,2));} 
+else if(NR%4==2) print;}' > M1_S4_L001_R1_001.cln.fa
+
+
+2. Since you want the sequence reads want to be the database, make a blast db of the new fasta file (i.e., the culex reads).
+
+$srun --pty bash
+$module load blast
+$makeblastdb -dbtype nucl  -in M1_S4_L001_R1_001.cln.fa
+
+
+3. Run blast with tRNA file as query sequence
+$ blastn -query culex_quinq_tRNArRNA.fa \
+-max_target_seqs 20 \
+-max_hsps 1 \
+-outfmt "6 qseqid sseqid pident evalue bitscore" \
+-db  M1_S4_L001_R1_001.cln.fa \
+-out M1_S4_L001_R1_001.cln.blast_output
+
+
+
