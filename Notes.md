@@ -121,5 +121,5 @@ $ blastn -query culex_quinq_tRNArRNA.fa \
 -db  M1_S4_L001_R1_001.cln.fa \
 -out M1_S4_L001_R1_001.cln.blast_output
 
-
+## 10.18
 
