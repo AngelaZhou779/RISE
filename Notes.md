@@ -121,5 +121,37 @@ $ blastn -query culex_quinq_tRNArRNA.fa \
 -db  M1_S4_L001_R1_001.cln.fa \
 -out M1_S4_L001_R1_001.cln.blast_output
 
+
+Results of BLAST: several matches were found with high percent identities and low p-values.
+
 ## 10.18
 
+Because the blast results showed several matches were found with high percent identities and low p-values, but bowtie 2 found 0 alignments, I will align our sequence reads against the whole cq mitochondrial genome:
+
+Found that the same error: ![unnamed](https://user-images.githubusercontent.com/78465068/138136776-717da779-0fe4-4884-9ae7-a45db8b99cb4.png)
+
+Therefore, I used the -S for a sam output file instead of -b for bam and got an output alignment file called M1_S4_L001_R1_001.ctn2.sam
+
+Convert sam to bam:
+srun --pty bash 
+module load samtools
+samtools view -S -b M1_S4_L001_R1_001.ctn2.sam > M1_S4_L001_R1_001.ctn2.bam
+
+Full results below:
+samtools flagstat M1_S4_L001_R1_001.ctn2.bam
+
+51097708 + 0 in total (QC-passed reads + QC-failed reads)
+0 + 0 secondary
+0 + 0 supplementary
+0 + 0 duplicates
+220589 + 0 mapped (0.43% : N/A)
+0 + 0 paired in sequencing
+0 + 0 read1
+0 + 0 read2
+0 + 0 properly paired (N/A : N/A)
+0 + 0 with itself and mate mapped
+0 + 0 singletons (N/A : N/A)
+0 + 0 with mate mapped to a different chr
+0 + 0 with mate mapped to a different chr (mapQ>=5)
+
+gcloud compute scp cherries-controller:/home/zz220/RISE/clndata/M1_S4_L001_R1_001.ctn2.bam ./
