@@ -168,4 +168,5 @@ $bowtie2  --un M1_S4_L001_R1_001.cln.flt.fastq.gz -x contam_align -U M1_S4_L001_
 
 grep -c to cont to grep a few base pairs from contaminant file with the unfiltered and filtered files
 
+put into slurm script. 
 
