@@ -170,3 +170,4 @@ grep -c to cont to grep a few base pairs from contaminant file with the unfilter
 
 put into slurm script. 
 
+add alignment rates into excel
