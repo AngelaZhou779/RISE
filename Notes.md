@@ -82,6 +82,9 @@ From the fastqc files, you can see that the per base sequences quality improved 
 ## 10.15
 Aim: to remove tRNA and other contaminates. Note: raw files were removed from my folder. Trimmed files (with the adapters removed) have the extension cln_fastqc.html
 
+Obtained tRNA and rRNA sequences from [here](https://www.ncbi.nlm.nih.gov/nucleotide/NC_014574.1)
+
+
 First tried the following methodolgy on one data file: M1_S4_L001_R1_001.ctn.bam
 To make index:
 $bowtie2-build –h
@@ -155,3 +158,14 @@ samtools flagstat M1_S4_L001_R1_001.ctn2.bam
 0 + 0 with mate mapped to a different chr (mapQ>=5)
 
 gcloud compute scp cherries-controller:/home/zz220/RISE/clndata/M1_S4_L001_R1_001.ctn2.bam ./
+
+wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/732/765/GCF_015732765.1_VPISU_Cqui_1.0_pri_paternal/GCF_015732765.1_VPISU_Cqui_1.0_pri_paternal_genomic.gff.gz
+
+--un: to get the file with anything that aligned to contaminants filtered out:
+
+
+$bowtie2  --un M1_S4_L001_R1_001.cln.flt.fastq.gz -x contam_align -U M1_S4_L001_R1_001.cln.fastq.gz -s M1_S4_L001_R1_001.ctn.sam
+
+grep -c to cont to grep a few base pairs from contaminant file with the unfiltered and filtered files
+
+
