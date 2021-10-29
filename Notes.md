@@ -61,7 +61,7 @@ Count the number of lines using wc -l and then divide by 4
 ## 9.29
 To clean the files, I ran the following [trimmomatic script](https://github.com/AngelaZhou779/RISE/blob/main/script/Trimmomatic.sh).
 
-Note that SE was used. In addition, the adapter sequences for the Illumina small RNA 3' adapter can be found [here](https://github.com/AngelaZhou779/RISE/blob/main/miscellaneous/smalladaptercontent.md). Also, all the cleaned files will have the annotation: .cln.fastq
+Note that SE was used. In addition, the adapter sequences for the Illumina small RNA 3' adapter can be found [here](https://github.com/AngelaZhou779/RISE/blob/main/miscellaneous/smalladaptercontent.md). These sequences were obtained after contacting those that did the illlumina sequencing and asking for the exact adapter sequences used. Also, all the cleaned files will have the annotation: .cln.fastq
 This file can also be found the the trimmomatic folder of my account with the following path: /home/zz220/trimmomatic/Trimmomatic-0.39/adapters/smRNA_NexFlex_adapters.fa
 
 Afterwards I ran the files through fastqc using the [following fastqc script](https://github.com/AngelaZhou779/RISE/blob/main/script/fastqc_clnfiles.sh).
@@ -87,9 +87,12 @@ Obtained tRNA and rRNA sequences from [here](https://www.ncbi.nlm.nih.gov/nucleo
 
 First tried the following methodolgy on one data file: M1_S4_L001_R1_001.ctn.bam
 To make index:
+
+to find how to build the index: 
 $bowtie2-build –h
-bowtie2-build [options]* <reference_in> <bt2_index_base>
-=> bowtie2-build culex_quinq_tRNArRNA.fa contam_align
+$bowtie2-build [options]* <reference_in> <bt2_index_base>
+
+Plugging in the name of our files: we get the command $bowtie2-build culex_quinq_tRNArRNA.fa contam_align
  
 To run alignment and put non-aligned reads into filtered fasta (?):
  
@@ -163,11 +166,19 @@ wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/732/765/GCF_015732765.1_VP
 
 --un: to get the file with anything that aligned to contaminants filtered out:
 
+## 10.28
 
-$bowtie2  --un M1_S4_L001_R1_001.cln.flt.fastq.gz -x contam_align -U M1_S4_L001_R1_001.cln.fastq.gz -s M1_S4_L001_R1_001.ctn.sam
+Previous experiments show that using bowtie2 to get a file with all the reads that are not aligned to the contaminants is a viable option. In addition to the tRNAs + small rRNA + large rRNA in mitochondrial genome which was obtained from this [link] (https://www.ncbi.nlm.nih.gov/nuccore/?term=Culex+quinquefasciatus+mitochondrion), the contaminant file also includes the 5S rRNA sequence. The contaminant file is called [culex_quinq_tRNArRNA.fa](https://github.com/AngelaZhou779/RISE/blob/main/miscellaneous/culex_quinq_tRNArRNA.fa)
+
+Next, we will align our cleaned (trimmed) data files to our contaminant file:
+1. Recreate index with modified contaminant file:
+$bowtie2-build culex_quinq_tRNArRNA.fa contam_align
+
+2. Create a slurm script for each data sample:
+This is the slurm script for the first sample (M1) [here](https://github.com/AngelaZhou779/RISE/blob/main/miscellaneous/bowtie2slurmscriptM1.SBATCH)
 
 grep -c to cont to grep a few base pairs from contaminant file with the unfiltered and filtered files
 
-put into slurm script. 
+
 
 add alignment rates into excel
