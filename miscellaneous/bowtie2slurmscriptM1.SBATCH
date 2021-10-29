@@ -22,5 +22,3 @@ bowtie2  --un M1.flt.cln.fq.gz -x $index_base -U M1_S4_L001_R1_001.cln.fastq.gz 
 module unload bowtie2/2.4.4
 
 #- FIN -----------------------#
-
-
