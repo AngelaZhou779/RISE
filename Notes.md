@@ -181,12 +181,14 @@ $bowtie2-build culex_quinq_tRNArRNA.fa contam_align
 This is the slurm script for the first sample (M1) [here](https://github.com/AngelaZhou779/RISE/blob/main/miscellaneous/bowtie2slurmscriptM1.SBATCH)
 
 Trying to grep for the tRNA sequence to check: >NC_014574.1:c1369-1304 Culex quinquefasciatus mitochondrion, complete genome
-'''
+
+```
 [zz220@cherries-controller newbowtiealignment]$ grep -c AACTTTATATTCAATAATGATATTAGACTGCAATTCTGAAGGAATAATTTTTTAATTATTAAAGTT P3_S3_L001_R1_001.cln.fastq
 12
 [zz220@cherries-controller newbowtiealignment]$ grep -c AACTTTATATTCAATAATGATATTAGACTGCAATTCTGAAGGAATAATTTTTTAATTATTAAAGTT P3.flt.cln.fq.gz
 0
-'''
+```
+
 checking if this sequence from the contaminant file is still in the filtered files, it is not.
 
 I also added the alignment rates into my small RNA files summary table (excel sheet).
