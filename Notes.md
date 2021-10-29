@@ -138,6 +138,9 @@ Found that the same error: ![unnamed](https://user-images.githubusercontent.com/
 
 Therefore, I used the -S for a sam output file instead of -b for bam and got an output alignment file called M1_S4_L001_R1_001.ctn2.sam
 
+Each bowtie alignment took ~20min to run
+
+
 Convert sam to bam:
 srun --pty bash 
 module load samtools
