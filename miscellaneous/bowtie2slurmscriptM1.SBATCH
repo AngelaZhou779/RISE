@@ -16,8 +16,7 @@ module load bowtie2/2.4.4
 index_base=contam_align
  
 #- RUN command ----------------#
-bowtie2 -x $index_base -1 $forward_read -2 $reverse_read -S $output
-bowtie2  --un M1.flt.cln.fq.gz -x index_base -U M1_S4_L001_R1_001.cln.fastq.gz -S MM1.flt.cln.sam
+bowtie2  --un M1.flt.cln.fq.gz -x $index_base -U M1_S4_L001_R1_001.cln.fastq.gz -S M1.flt.cln.sam
 
 #- Unload module----------------#
 module unload bowtie2/2.4.4
