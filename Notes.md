@@ -192,3 +192,9 @@ Trying to grep for the tRNA sequence to check: >NC_014574.1:c1369-1304 Culex qui
 checking if this sequence from the contaminant file is still in the filtered files, it is not.
 
 I also added the alignment rates into my small RNA files summary table (excel sheet).
+
+Uploading the files without the contaminants, i.e. the filtered files onto the google bucket: gsutil cp *flt.cln.fq.gz gs://gu-biology-pi-paa9/culexBiting_smallRNA/cleaned_reads/
+
+
+
+
