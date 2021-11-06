@@ -193,7 +193,7 @@ checking if this sequence from the contaminant file is still in the filtered fil
 
 I also added the alignment rates into my small RNA files summary table (excel sheet).
 
-Uploading the files without the contaminants, i.e. the filtered files onto the google bucket: gsutil cp *flt.cln.fq.gz gs://gu-biology-pi-paa9/culexBiting_smallRNA/cleaned_reads/
+Uploading the files without the contaminants, i.e. the filtered files onto the google bucket: gsutil cp *flt.cln.fq gs://gu-biology-pi-paa9/culexBiting_smallRNA/cleaned_reads/
 
 
 
