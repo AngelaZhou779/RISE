@@ -1,14 +1,17 @@
 # Making a conda virtual environment to install miRDeep2 on the hpc
+First go into computational node: srun --pty bash
 
 Conda: https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/
-- I don't think the "anaconda" part is really needed in the second line
+- I don't think the "anaconda" part is really needed in the second line (can you specify only that you download anaconda?)
+
+load anaconda:
 ```
 module load anaconda3/3.8
 conda create --name conda-env anaconda
 ```
 Creating the environment took a long time (30 minutes?) and then it wanted me to agree with downloaded a bunch of packages (about 350MB)
 
-To go into the conda environment I had to initialize the terminal (?) with `conda init bash` and then close out and go back in. I was then able to activate the environment from my home directory with `conda activate conda-env`
+To go into the conda environment I had to initialize the terminal (?) with `conda init bash` and then close out of the terminal and go back in. I was then able to activate the environment from my home directory with `conda activate conda-env`
 
 To exit out of the conda environment you use `conda deactivate`
 
@@ -42,3 +45,8 @@ miRDeep2.pl reads.fa genome.fa reads_vs_genome.arf mautre_ref_miRNAs.fa mature_o
 
 
 To remove a conda environment: `conda remove -n yourenvname -all`
+
+
+
+anaconda environemnet is hideen: ls -lah
+environment is hidden, you know that because there is a . in front of the environment: .conda
