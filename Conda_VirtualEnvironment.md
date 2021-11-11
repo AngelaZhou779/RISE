@@ -11,10 +11,32 @@ conda create --name conda-env anaconda
 ```
 Creating the environment took a long time (30 minutes?) and then it wanted me to agree with downloaded a bunch of packages (about 350MB)
 
-To go into the conda environment I had to initialize the terminal (?) with `conda init bash` and then close out of the terminal and go back in. I was then able to activate the environment from my home directory with `conda activate conda-env`
+Angie: it took around 30 minutes: as a result I got
+```
+#
+# To activate this environment, use
+#
+#     $ conda activate conda-env
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+```
+
+To go into the conda environment I had to initialize the terminal (?) with `conda init bash` and then close out of the terminal and go back in. Upon using `conda init bash` you get:
+
+```
+modified      /home/zz220/.bashrc
+
+==> For changes to take effect, close and re-open your current shell. <==
+
+```
+I was then able to activate the environment from my home directory with `conda activate conda-env`
+
+This should give you:
+`(conda-env) [zz220@cherries-compute-0-10 ~]$ `
 
 To exit out of the conda environment you use `conda deactivate`
-
 
 After I was in the environment, I then tried rerunning the code to install miRDeep2
 ```
@@ -40,9 +62,6 @@ Example of use:
 
 miRDeep2.pl reads.fa genome.fa reads_vs_genome.arf mautre_ref_miRNAs.fa mature_other_miRNAs.fa  hairpin_ref_miRNAs -t Mouse 2>report.log
 ```
-
-
-
 
 To remove a conda environment: `conda remove -n yourenvname -all`
 
