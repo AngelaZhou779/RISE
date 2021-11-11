@@ -65,7 +65,17 @@ miRDeep2.pl reads.fa genome.fa reads_vs_genome.arf mautre_ref_miRNAs.fa mature_o
 
 To remove a conda environment: `conda remove -n yourenvname -all`
 
-
-
+Note:
 anaconda environemnet is hideen: ls -lah
 environment is hidden, you know that because there is a . in front of the environment: .conda
+
+From this [github page](https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/)
+
+1. However, you can check to see if conda is installed and in your PATH by `conda -V` which gives me `conda 4.10.3` indicating that anaconda has indeed been installed correctly.
+
+2. Check conda is up to date: In the terminal client enter
+`conda update conda`
+
+which gave me a list of packages do download-> proceeded with download.
+
+
