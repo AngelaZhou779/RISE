@@ -201,5 +201,15 @@ Downloaded miRDeep2 on my google HPC using the following [script](https://github
 
 Tried to update anaconda but got this error message:
 
+```
+Preparing transaction: done
+Verifying transaction: failed
+
+EnvironmentNotWritableError: The current user does not have write permissions to the target environment.
+  environment location: /home/share/apps/python/anaconda3-3.8
+  uid: 250823
+  gid: 100
+```
+
 
 
