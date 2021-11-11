@@ -195,6 +195,8 @@ I also added the alignment rates into my small RNA files summary table (excel sh
 
 Uploading the files without the contaminants, i.e. the filtered files onto the google bucket: gsutil cp *flt.cln.fq gs://gu-biology-pi-paa9/culexBiting_smallRNA/cleaned_reads/
 
+## Nov 11
 
+Downloaded miRDeep2 on my google HPC using the following [script](https://github.com/AngelaZhou779/RISE/blob/main/Conda_VirtualEnvironment.md): Sarah wrote the guide and I added comments as I installed it. 
 
 
