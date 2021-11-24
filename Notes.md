@@ -297,3 +297,5 @@ cqu-mir-1174 MI0013561
 >cqu-mir-375-2 MI0023549
 
 
+Hong et. al has sone redundant sequences because it occurs multiple places within the genome.
+
