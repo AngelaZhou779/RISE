@@ -299,3 +299,8 @@ cqu-mir-1174 MI0013561
 
 Hong et. al has sone redundant sequences because it occurs multiple places within the genome. Moving foward we will work with the nonredundant entries, though we will be able to get the 
 
+mapper.pl- pre step to get arf file
+
+miRDeep2 script
+
+
