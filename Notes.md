@@ -303,4 +303,7 @@ mapper.pl- pre step to get arf file
 
 miRDeep2 script
 
+Get rid of redundancies in hong et al. 
+get rid of redundanices btw both files
+combine into one file
 
