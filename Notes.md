@@ -307,5 +307,11 @@ Get rid of redundancies in hong et al.
 get rid of redundanices btw both files
 combine into one file
 
+MiRDEEP2
 ranfold p value: RNA fold from vienna suite- stable hairpin structure
+
+mapper: mature and precursor mrna read files
+18-24 size sorting
+
+
 
