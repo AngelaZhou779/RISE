@@ -313,5 +313,5 @@ ranfold p value: RNA fold from vienna suite- stable hairpin structure
 mapper: mature and precursor mrna read files
 18-24 size sorting
 
-
+next week meet to go over DESEQ results
 
