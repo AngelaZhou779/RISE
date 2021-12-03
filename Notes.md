@@ -307,3 +307,5 @@ Get rid of redundancies in hong et al.
 get rid of redundanices btw both files
 combine into one file
 
+ranfold p value: RNA fold from vienna suite- stable hairpin structure
+
