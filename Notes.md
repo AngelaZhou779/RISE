@@ -222,6 +222,8 @@ $ grep -Ff cp_seqonly CulexquiqmiRBase.fa|more
 
 Hong et. al has sone redundant sequences because it occurs multiple places within the genome. Moving foward we will work with the nonredundant entries. In addition, we applied size sorting of 18-24 base pairs.
 
+In addition, it looks like miRBase offers both precursor and mature sequences, but the Hong et. al paper only offers mature sequences so from now on, we will go forward using the mature sequences. They will be compiled in this file
+
 ## Nov 26
 mapper.pl- pre step to get arf file
 
@@ -239,5 +241,7 @@ Result: It looks like the ranfold p-value for all miRNAs *including the miRNAs t
 mapper: mature and precursor miRNA read files gives us quantification wihtout haivng to run the miRDeep2 script. 
 
 ## Dec 3
-Result from miRDeep2, running mapper.pl
+Result from miRDeep2, running mapper.pl: 
+
+
 
