@@ -231,7 +231,7 @@ miRDeep2 script
 
 Get rid of redundancies in hong et al. 
 get rid of redundanices btw both files
-combine into one file
+combine into one file called (unique) [https://github.com/AngelaZhou779/RISE/blob/main/miscellaneous/unique_miRNAs.fa]
 
 We considered using ranfold p-value to determine potentially determine novel miRNAs that form stable hairpin structures:
 ranfold p value: RNA fold from vienna suite- stable hairpin structure
