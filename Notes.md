@@ -218,87 +218,11 @@ Made two fasta files with miRNAs from the Hong et al paper and frmo miRBase name
 
 $ grep -v ">" CulexpipiensmiRNAHong.fa >cp_seqonly
 
-$ grep -wFf cp_seqonly CulexquiqmiRBase.fa|more
+$ grep -Ff cp_seqonly CulexquiqmiRBase.fa|more
 
-The following redundencies were found:
-cqu-mir-1174 MI0013561
->cqu-mir-125 MI0013562
->cqu-mir-iab-4 MI0013563
->cqu-mir-281-1 MI0013564
->cqu-mir-124 MI0013565
->cqu-mir-1 MI0013566
->cqu-mir-988 MI0013567
->cqu-mir-275 MI0013568
->cqu-mir-315 MI0013569
->cqu-let-7 MI0013570
->cqu-mir-13 MI0013571
->cqu-mir-957 MI0013572
->cqu-mir-999 MI0013573
->cqu-mir-277 MI0013574
->cqu-mir-965 MI0013575
->cqu-mir-252-1 MI0013576
->cqu-mir-993 MI0013577
->cqu-mir-278 MI0013578
->cqu-mir-970 MI0013579
->cqu-mir-283 MI0013580
->cqu-mir-9 MI0013581
->cqu-mir-305 MI0013582
->cqu-mir-317-1 MI0013583
->cqu-mir-981 MI0013584
->cqu-mir-100 MI0013585
->cqu-mir-989 MI0013586
->cqu-mir-1175 MI0013587
->cqu-mir-276-1 MI0013588
->cqu-mir-276-2 MI0013589
->cqu-mir-276-3 MI0013590
->cqu-mir-12 MI0013591
->cqu-mir-210 MI0013592
->cqu-mir-263 MI0013593
->cqu-mir-92 MI0013594
->cqu-mir-71 MI0013596
->cqu-mir-190-2 MI0013597
->cqu-mir-190-1 MI0013598
->cqu-mir-1000 MI0013599
->cqu-mir-10 MI0013600
->cqu-mir-11 MI0013601
->cqu-mir-8 MI0013602
->cqu-mir-285 MI0013603
->cqu-mir-2 MI0013604
->cqu-mir-137 MI0013605
->cqu-mir-932 MI0013606
->cqu-mir-14 MI0013607
->cqu-mir-279 MI0013608
->cqu-mir-996 MI0013609
->cqu-bantam MI0013610
->cqu-mir-1891 MI0013611
->cqu-mir-7 MI0013612
->cqu-mir-184 MI0013613
->cqu-mir-31 MI0013614
->cqu-mir-1890 MI0013615
->cqu-mir-980 MI0013617
->cqu-mir-308 MI0013618
->cqu-mir-79 MI0013619
->cqu-mir-33 MI0013620
->cqu-mir-2951 MI0013621
->cqu-mir-2941-1 MI0013622
->cqu-mir-2941-2 MI0013623
->cqu-mir-2952 MI0013624
->cqu-mir-133 MI0013625
->cqu-mir-306 MI0013626
->cqu-mir-87 MI0013627
->cqu-mir-1889 MI0013628
->cqu-mir-316 MI0013629
->cqu-mir-375-1 MI0013630
->cqu-mir-309 MI0013631
->cqu-mir-998 MI0013632
->cqu-mir-252-2 MI0023546
->cqu-mir-281-2 MI0023547
->cqu-mir-317-2 MI0023548
->cqu-mir-375-2 MI0023549
+Hong et. al has sone redundant sequences because it occurs multiple places within the genome. Moving foward we will work with the nonredundant entries. In addition, we applied size sorting of 18-24 base pairs.
 
-
-Hong et. al has sone redundant sequences because it occurs multiple places within the genome. Moving foward we will work with the nonredundant entries, though we will be able to get the 
-
+## Nov 26
 mapper.pl- pre step to get arf file
 
 miRDeep2 script
@@ -307,11 +231,13 @@ Get rid of redundancies in hong et al.
 get rid of redundanices btw both files
 combine into one file
 
-MiRDEEP2
+We considered using ranfold p-value to determine potentially determine novel miRNAs that form stable hairpin structures:
 ranfold p value: RNA fold from vienna suite- stable hairpin structure
 
-mapper: mature and precursor mrna read files
-18-24 size sorting
+Result: It looks like the ranfold p-value for all miRNAs *including the miRNAs that were on miRBase and from Hong et al. had a 0 ranfold p-value suggesting that ranfold p-value is not a good way to measure the potential stability of these small RNAs. Given that we already have quite a comprehensive list of miRNAs in cx. quiq and cx. pipiens. Therefore, we decided to proceeed forward without identifying novel miRNAs.
 
-next week meet to go over DESEQ results
+mapper: mature and precursor miRNA read files gives us quantification wihtout haivng to run the miRDeep2 script. 
+
+## Dec 3
+Result from miRDeep2, running mapper.pl
 
