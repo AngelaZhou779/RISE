@@ -231,7 +231,9 @@ miRDeep2 script
 
 Get rid of redundancies in hong et al. 
 get rid of redundanices btw both files
-combine into one file called (unique) [https://github.com/AngelaZhou779/RISE/blob/main/miscellaneous/unique_miRNAs.fa]
+combine into one file called (unique)[https://github.com/AngelaZhou779/RISE/blob/main/miscellaneous/unique_miRNAs.fa]
+
+However, please note that some sequences in the file are identical execpt due to size sorting, they are off by 1-3 base pairs.
 
 We considered using ranfold p-value to determine potentially determine novel miRNAs that form stable hairpin structures:
 ranfold p value: RNA fold from vienna suite- stable hairpin structure
@@ -241,7 +243,7 @@ Result: It looks like the ranfold p-value for all miRNAs *including the miRNAs t
 mapper: mature and precursor miRNA read files gives us quantification wihtout haivng to run the miRDeep2 script. 
 
 ## Dec 3
-Result from miRDeep2, running mapper.pl: 
+Result from miRDeep2, running mapper.pl: resulting cvs file with 16 columns. Upon looking through this cvs 
 
 
 
