@@ -243,7 +243,7 @@ Result: It looks like the ranfold p-value for all miRNAs *including the miRNAs t
 mapper: mature and precursor miRNA read files gives us quantification wihtout haivng to run the miRDeep2 script. 
 
 ## Dec 3
-Result from miRDeep2, running mapper.pl: resulting cvs file with 16 columns. Upon looking through this cvs 
+Result from miRDeep2, running mapper.pl: resulting cvs file with 16 columns. Upon looking through this cvs file, you see that some columns are repeated 
 
 
 
