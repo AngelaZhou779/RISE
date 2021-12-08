@@ -243,7 +243,15 @@ Result: It looks like the ranfold p-value for all miRNAs *including the miRNAs t
 mapper: mature and precursor miRNA read files gives us quantification wihtout haivng to run the miRDeep2 script. 
 
 ## Dec 3
-Result from miRDeep2, running mapper.pl: resulting cvs file with 16 columns. Upon looking through this cvs file, you see that some columns are repeated 
+Result from miRDeep2, running mapper.pl: resulting cvs file with 16 columns. Upon looking through this cvs file, you see that some columns are repeated because 
+1) The same miRNA but different precursors
+2) Different miRNAs (from either Hong or miRBase) and we need to manually check the sequences to see if they are close (one base difference)
+
+I collapsed the identical rows. I listed out the reason why I collapsed the rows and listed the repeated rows in this excel sheet: (repeated sequences)[https://github.com/AngelaZhou779/RISE/blob/main/miscellaneous/AfterMiRDEEP2_InprepforDESeq/Repeated%20sequences.xlsx]
+
+I will be running DESeq with the following cvs file with the identical rows removed and with only the needed data columns (counts_miRNA.csv)[https://github.com/AngelaZhou779/RISE/blob/main/miscellaneous/input%20for%20DESeq/counts_miRNA.csv]
+
+
 
 
 
