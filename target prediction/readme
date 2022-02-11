@@ -1,0 +1,1 @@
+Target prediction: first get the gff and fasta file, extract UTRs by using bedtools. Create a new gff to get coordinates for UTRs and extract UTRs to make a new fafsa file with them.
