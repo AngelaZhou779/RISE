@@ -22,4 +22,4 @@ In order to run this you must set the path to find it (I did this from $HOME) `e
 /home/sm3679/bin/bedops/bin/gff2bed < /home/sm3679/culex_smallRNA/culexJ_genome/three_prime_UTR.gff > /home/sm3679/culex_smallRNA/culexJ_genome/three_prime_UTR.bed
 ```
 
-Run bedtools_getfasta with the new bed file and complete fasta
+Run [bedtools_getfasta](https://github.com/AngelaZhou779/RISE/blob/main/target%20prediction/bedtools_getfasta.sh) with the new bed file and complete fasta
