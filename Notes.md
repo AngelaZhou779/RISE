@@ -251,7 +251,8 @@ I collapsed the identical rows. I listed out the reason why I collapsed the rows
 
 I will be running DESeq with the following cvs file with the identical rows removed and with only the needed data columns (counts_miRNA.csv)[https://github.com/AngelaZhou779/RISE/blob/main/miscellaneous/input%20for%20DESeq/counts_miRNA.csv]
 
-
+## Dec 8
+Ran DESeq and obtained 
 
 
 
