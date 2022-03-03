@@ -252,7 +252,7 @@ I collapsed the identical rows. I listed out the reason why I collapsed the rows
 I will be running DESeq with the following cvs file with the identical rows removed and with only the needed data columns (counts_miRNA.csv)[https://github.com/AngelaZhou779/RISE/blob/main/miscellaneous/input%20for%20DESeq/counts_miRNA.csv]
 
 ## Dec 8
-Ran DESeq and obtained 
+Ran DESeq and obtained the following volcano plot with 8 DE miRNAs: ![updated volcano plot](https://user-images.githubusercontent.com/78465068/156470750-19dfb1c7-f96d-4605-9d33-5d2092fc29d1.png)
 
 
 
