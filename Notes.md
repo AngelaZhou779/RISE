@@ -280,10 +280,20 @@ Overall, we found 3 main trends in biological function:
 2. Longevity/Fertility
 3. Energy utilization
 
-Two of our significant miRNAs did not have any annotation in Xu et. al so I will proceed to do seperate literature searches for them.
+Two of our significant miRNAs did not have any annotation in Xu et. al so I will proceed to do seperate literature searches for them:
+miR-283 and miR-2592
+
+https://www.ncbi.nlm.nih.gov/gene/100314356
+https://pubmed.ncbi.nlm.nih.gov/20817720/
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2956262/
+https://www.ncbi.nlm.nih.gov/gene/100314356
+https://journals.plos.org/plosntds/article?id=10.1371/journal.pntd.0006463
+https://www.mdpi.com/1999-4915/13/8/1464
 
 Future directions
 Target identification of the 8 DE miRNAs
 Discuss with collaborators
 RT-PCR
-<img width="351" alt="image" src="https://user-images.githubusercontent.com/78465068/156491102-e371ceae-8cd5-4e69-bd69-e5183b5770ff.png">
+
+
+
