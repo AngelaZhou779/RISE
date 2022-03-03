@@ -253,6 +253,22 @@ I will be running DESeq with the following cvs file with the identical rows remo
 
 ## Dec 8
 Ran DESeq and obtained the following volcano plot with 8 DE miRNAs: ![updated volcano plot](https://user-images.githubusercontent.com/78465068/156470750-19dfb1c7-f96d-4605-9d33-5d2092fc29d1.png)
+Figure 1. Volano plot showing the 8 DE miRNAs as 8 red dots. They have large fold changes that are also statistically significant. We used cutoff values of filter(padj < 0.05, abs(log2FoldChange) > 0.58) corresponding to a 1.5 fold change increase or decrease in expression.
 
+I also obtained a table listing all the significant miRNAs with their corresponding p-value and log fold change.
 
+## Jan-Feb 2021
+
+Now that I have obtained the list of significant miRNAs, we have decided to go ahead to first:
+
+1. Explore their biological functions through doing literature searches
+2. Predict their downstream target messenger RNAs
+
+Sarah will be spearheading point 2. Regarding point 1., we found an important supplementary table from Xu et. al. that listed all of the predicted and validated of mosquito miRNA targets and functions:
+
+[miRNAs highlighted Table_S1_Development of miRNA-Based Approaches to Explore the Interruption of Mosquito-Borne Disease Transmission.docx](https://github.com/AngelaZhou779/RISE/files/8174654/miRNAs.highlighted.Table_S1_Development.of.miRNA-Based.Approaches.to.Explore.the.Interruption.of.Mosquito-Borne.Disease.Transmission.docx)
+
+The table with the signifcant miRNAs and notes from Xu. et al. are here:
+
+Link to my lab presentation with results:
 
