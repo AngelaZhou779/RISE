@@ -269,6 +269,21 @@ Sarah will be spearheading point 2. Regarding point 1., we found an important su
 [miRNAs highlighted Table_S1_Development of miRNA-Based Approaches to Explore the Interruption of Mosquito-Borne Disease Transmission.docx](https://github.com/AngelaZhou779/RISE/files/8174654/miRNAs.highlighted.Table_S1_Development.of.miRNA-Based.Approaches.to.Explore.the.Interruption.of.Mosquito-Borne.Disease.Transmission.docx)
 
 The table with the signifcant miRNAs and notes from Xu. et al. are here:
+[miRNA notes.xlsx](https://github.com/AngelaZhou779/RISE/files/8174752/miRNA.notes.xlsx)
 
-Link to my lab presentation with results:
+Link to my lab presentation with results and discussing the results: 
 
+[Lab presentation 2.21 most updated version.pptx](https://github.com/AngelaZhou779/RISE/files/8174756/Lab.presentation.2.21.most.updated.version.pptx)
+
+Overall, we found 3 main trends in biological function: 
+1. Immunity
+2. Longevity/Fertility
+3. Energy utilization
+
+Two of our 
+
+Future directions
+Target identification of the 8 DE miRNAs
+Discuss with collaborators
+RT-PCR
+<img width="351" alt="image" src="https://user-images.githubusercontent.com/78465068/156491102-e371ceae-8cd5-4e69-bd69-e5183b5770ff.png">
