@@ -256,7 +256,9 @@ I collapsed the identical rows. I listed out the reason why I collapsed the rows
 I will be running DESeq with the following cvs file with the identical rows removed and with only the needed data columns (counts_miRNA.csv)[https://github.com/AngelaZhou779/RISE/blob/main/miscellaneous/input%20for%20DESeq/counts_miRNA.csv]
 
 ## Dec 8
-Ran DESeq and obtained the following volcano plot with 8 DE miRNAs: ![updated volcano plot](https://user-images.githubusercontent.com/78465068/156470750-19dfb1c7-f96d-4605-9d33-5d2092fc29d1.png)
+Ran DESeq https://github.com/AngelaZhou779/RISE/blob/main/script/DESeqmiRNA.R
+
+and obtained the following volcano plot with 8 DE miRNAs: ![updated volcano plot](https://user-images.githubusercontent.com/78465068/156470750-19dfb1c7-f96d-4605-9d33-5d2092fc29d1.png)
 Figure 1. Volano plot showing the 8 DE miRNAs as 8 red dots. They have large fold changes that are also statistically significant. We used cutoff values of filter(padj < 0.05, abs(log2FoldChange) > 0.58) corresponding to a 1.5 fold change increase or decrease in expression.
 
 I also obtained a table listing all the significant miRNAs with their corresponding p-value and log fold change.
