@@ -60,8 +60,16 @@ Count the number of lines using wc -l and then divide by 4
 
 ## 9.29
 To clean the files, I ran the following [trimmomatic script](https://github.com/AngelaZhou779/RISE/blob/main/script/Trimmomatic.sh).
-headcrop four in the begginning, but no command to crop the four at the end which could be any base pairs
-Note that SE was used. In addition, the adapter sequences for the Illumina small RNA 3' adapter can be found [here](https://github.com/AngelaZhou779/RISE/blob/main/miscellaneous/smalladaptercontent.md). These sequences were obtained after contacting those that did the illlumina sequencing and asking for the exact adapter sequences used. Also, all the cleaned files will have the annotation: .cln.fastq
+
+Trimmomatic (version 0.39) was used to trim sequence reads based on quality ([script](https://github.com/AngelaZhou779/RISE/blob/main/script/Trimmomatic.sh))
+
+FastQC (v0.11.9) was used for quality control visualization ([script](https://github.com/srmarzec/Culex_Biting_RNAseq/blob/main/Upstream/fastqc.sh))
+
+Preliminary trimming and fastqc showed a poor "per sequence base content" for the first few bases. Therefore, we used headcrop four in the begginning, but there is no command to crop the four at the end which could be any base pairs. Note that SE settings were used. 
+
+In addition, we removed the adapter sequences for the Illumina small RNA 3' adapter, which can be found [here]. (https://github.com/AngelaZhou779/RISE/blob/main/miscellaneous/smalladaptercontent.md) 
+ 
+These sequences were obtained after contacting those that did the illlumina sequencing and asking for the exact adapter sequences used. Also, all the cleaned files will have the annotation: .cln.fastq
 This file can also be found the the trimmomatic folder of my account with the following path: /home/zz220/trimmomatic/Trimmomatic-0.39/adapters/smRNA_NexFlex_adapters.fa
 
 Afterwards I ran the files through fastqc using the [following fastqc script](https://github.com/AngelaZhou779/RISE/blob/main/script/fastqc_clnfiles.sh).
