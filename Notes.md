@@ -90,8 +90,7 @@ From the fastqc files, you can see that the per base sequences quality improved 
 ## 10.15
 Aim: to remove tRNA and other contaminates. Note: raw files were removed from my folder. Trimmed files (with the adapters removed) have the extension cln_fastqc.html
 
-Obtained tRNA and rRNA sequences from [here](https://www.ncbi.nlm.nih.gov/nucleotide/NC_014574.1)
-
+We removed tRNA and rRNA sequences that we obtained from NCBI Culex quinquefasciatus mitochondrion, complete genome. The full link can be found [here](https://www.ncbi.nlm.nih.gov/nucleotide/NC_014574.1)
 
 First tried the following methodolgy on one data file: M1_S4_L001_R1_001.ctn.bam
 To make index:
@@ -148,7 +147,6 @@ Therefore, I used the -S for a sam output file instead of -b for bam and got an 
 
 Each bowtie alignment took ~20min to run
 
-
 Convert sam to bam:
 srun --pty bash 
 module load samtools
@@ -176,6 +174,12 @@ gcloud compute scp cherries-controller:/home/zz220/RISE/clndata/M1_S4_L001_R1_00
 wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/015/732/765/GCF_015732765.1_VPISU_Cqui_1.0_pri_paternal/GCF_015732765.1_VPISU_Cqui_1.0_pri_paternal_genomic.gff.gz
 
 --un: to get the file with anything that aligned to contaminants filtered out:
+
+
+Basically, we put all of our tRNA and rRNA sequences into a "contaminants" file and then made an index using bowtie2.
+
+We were able to get 6 output files with all the sequences that did NOT align with our contanminants file i.e. files with sequences that were not tRNAs or rRNAs (presumably mostly miRNAs are left).
+
 
 ## 10.28
 
